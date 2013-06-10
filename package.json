@@ -1,0 +1,26 @@
+{
+	"author": "xPaw <me@xpaw.ru>",
+	"name": "SteamID",
+	"description": "SteamID converter",
+	"version": "0.1",
+	"homepage": "https://github.com/xPaw/SteamID",
+	"main": "./SteamID",
+	"repository":
+	{
+		"type": "git",
+		"url": "git://github.com/xPaw/SteamID.git"
+	},
+	"scripts":
+	{
+		"test": "vows --spec"
+	},
+	"engines":
+	{
+		"node": ">= 0.4"
+	},
+	"dependencies": {},
+	"devDependencies":
+	{
+		"vows": "0.6.x"
+	}
+}
