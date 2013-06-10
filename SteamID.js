@@ -16,15 +16,15 @@
 		{
 			if( this.IsCommunityID( input ) !== null )
 			{
-				this.SetCommunityID( input );
+				return this.SetCommunityID( input );
 			}
 			else if( this.IsSteam2( input ) !== null )
 			{
-				this.SetSteam2( input );
+				return this.SetSteam2( input );
 			}
 			else
 			{
-				this.SetAccountID( input );
+				return this.SetAccountID( input );
 			}
 		}
 		
@@ -67,7 +67,8 @@
 			}
 			else
 			{
-				throw new Error( 'Input must be string or number' );
+				//throw new Error( 'Input must be string or number' );
+				return false;
 			}
 			
 			return this;
@@ -79,7 +80,8 @@
 			
 			if( CommunityID === null )
 			{
-				throw new Error( 'Input is not a valid CommunityID' );
+				//throw new Error( 'Input is not a valid CommunityID' );
+				return false;
 			}
 			
 			// TODO: What the fuck is going on below this line, terrible
@@ -101,7 +103,8 @@
 			
 			if( SteamID === null )
 			{
-				throw new Error( 'Input is not a valid SteamID' );
+				//throw new Error( 'Input is not a valid SteamID' );
+				return false;
 			}
 			
 			this.AccountID = ( SteamID[ 2 ] << 1 ) | SteamID[ 1 ];
